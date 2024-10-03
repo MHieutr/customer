@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+@extends('layout')
+
+@section('content')
 @if (session('success'))
     <p>{{ session('success') }}</p>
 @endif
@@ -26,5 +29,7 @@
     @if ($errors->has('login_error'))
     <p>{{ $errors->first('login_error') }}</p>
     @endif
+
+@endsection('content')
 </body>
 </html>

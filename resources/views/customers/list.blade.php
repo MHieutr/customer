@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+    @extends('layout')
+    @section('content')
     <table>
         <tr>
             <th>ID</th>
@@ -26,5 +28,6 @@
     <p><a href="{{route('products.productAdd')}}">Add Product</a></p>
     <br>
     <p><a href="{{route('products.product_list')}}">Product List</a></p>
+    @endsection('content')
 </body>
 </html>

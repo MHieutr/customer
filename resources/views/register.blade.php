@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+    @extends('layout')
+    @section('content')
     <form action="{{route('customers.register')}}" method="post">
         @csrf
         <label for="username">User name: </label>
@@ -22,6 +24,9 @@
 
         <button type="submit">Register</button>
     </form>
-    <p>Already have an account? <a href="{{route('customers.login_form')}}">Login</a></p>    
+    <p>Already have an account? <a href="{{route('customers.login_form')}}">Login</a></p>
+    
+    @endsection('content')
+    
 </body>
 </html>

@@ -6,12 +6,16 @@
     <title>Document</title>
 </head>
 <body>
+    @extends('layout')
+    @section('content')
+    
     <p><strong>Product ID: </strong> {{$product->id}}</p>
     <p><strong>Product Name: </strong> {{$product->Product_name}}</p>
     <p><strong>Price: </strong> {{$product->price}}</p>
     <p><strong>Product's Description: </strong> {{$product->description}}</p>
 
     <p><a href="{{route('products.product_list')}}">View List</a></p>
+    @endsection('content')
     
 </body>
 </html>

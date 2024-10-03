@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
+    @extends('layout')
+    @section('content')
+
     <form action="{{route('products.productAdd')}}" method="post">
         @csrf
         <label for="Product_name">Product Name: </label>
@@ -19,6 +15,6 @@
 
         <button type="submit">Add</button>
     </form>
-    <p> Product List? <a href="{{route('products.product_list')}}">View</a></p>    
-</body>
-</html>
+    <p> Product List? <a href="{{route('products.product_list')}}">View</a></p>
+    @endsection
+
